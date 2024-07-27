@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 body {
@@ -116,8 +117,6 @@ ul li {
 
 .job ul {
     margin: 10px 0;
-    border-bottom: 1px solid #ccc;
-    display: none;
 }
 
 .job ul li {
@@ -164,6 +163,83 @@ ul li {
 
 .collapsible.open .content {
     display: block;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+details {
+    position: relative;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+details .summary-title {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+details .summary-title span {
+    font-size: 40px;
+    line-height: 1;
+}
+
+details .summary-content {
+    cursor: default;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+details summary {
+    list-style: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover .summary-chevron-up svg {
+        opacity: 1;
+    }
+}
+
+details .summary-chevron-up svg {
+    opacity: 0.5;
+}
+
+details .summary-chevron-up,
+details .summary-chevron-down {
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffffff;
+}
+
+.job .summary-chevron-up,
+.job .summary-chevron-down {
+    pointer-events: none;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    background: #ffffff;
+}
+
+details .summary-chevron-up svg,
+details .summary-chevron-down svg {
+    display: block;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
 }
 
 @media (max-width: 600px) {
