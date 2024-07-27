@@ -82,6 +82,7 @@ section h2 {
     margin-bottom: 20px;
     border-bottom: 2px solid #ccc;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 section h2 span {
@@ -115,6 +116,8 @@ ul li {
 
 .job ul {
     margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+    display: none;
 }
 
 .job ul li {
@@ -142,6 +145,7 @@ ul li {
 .job-header {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .job-header img {
@@ -152,6 +156,14 @@ ul li {
 
 .job-header div {
     flex: 1;
+}
+
+.collapsible .content {
+    display: none;
+}
+
+.collapsible.open .content {
+    display: block;
 }
 
 @media (max-width: 600px) {
