@@ -12,6 +12,10 @@ body {
     color: #333;
 }
 
+strong {
+    font-weight: bold;
+}
+
 .container {
     margin: 0 auto;
     padding: 20px;
@@ -150,7 +154,12 @@ ul li {
 .job-header img {
     height: 100px;
     margin-right: 10px;
-    border: 1px solid #777;
+    border: 1px solid #aaa;
+}
+
+.job .job-header div img {
+    height: 50px;
+    border: 1px solid #fff;
 }
 
 .job-header div {
@@ -224,12 +233,15 @@ details .summary-chevron-down {
     background: #ffffff;
 }
 
-.job .summary-chevron-up,
-.job .summary-chevron-down {
+.job[open] .summary-chevron-up-child,
+.job:not([open]) .summary-chevron-down-child {
+    display: none;
+}
+
+.job:not([open]) .summary-chevron-up-child,
+.job[open] .summary-chevron-down-child {
+    flex: 0 0 5%;
     pointer-events: none;
-    position: absolute;
-    top: 40px;
-    right: 100px;
     background: #ffffff;
 }
 
