@@ -66,6 +66,16 @@ section {
     margin: 20px 0;
 }
 
+section h4 {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+section span {
+    white-space: nowrap;
+}
+
 section h2 {
     font-size: 20px;
     margin-top: 20px;
@@ -92,7 +102,7 @@ ul li {
 }
 
 .job h3 {
-    margin: 0;
+    margin: 5px 0 0 0;
     font-size: 18px;
     color: #333;
 }
@@ -137,7 +147,7 @@ ul li {
 .job-header img {
     height: 100px;
     margin-right: 10px;
-    border: 1px solid #333;
+    border: 1px solid #777;
 }
 
 .job-header div {
@@ -153,5 +163,17 @@ ul li {
     .profile-img {
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    .job-header {
+        flex-direction: column;
+    }
+
+    .job-header img {
+        margin-right: 0;
+    }
+
+    section span {
+        word-break: break-all;
     }
 }
